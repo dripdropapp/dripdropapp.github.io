@@ -6,12 +6,10 @@ $(document).ready(function(){
 var users = {};
 
 function getUsers(data) {
-    console.log(data);
     for (var i = 0; i < data.length; i++) {
         console.log(data[i]);
         users[data[i]['usr']] = data[i]['pwd'];
     }
-    console.log(users);
 }
 
 
@@ -33,11 +31,8 @@ function getUsers(data) {
 // });
 
 function submitClick() {
-  console.log("yo");
-  console.log($('#un').val());
-  console.log($('#pwd').val());
    if ($('#un').val() in users) {
-        console.log("username is in user");
+        // console.log("username is in user");
         if ($('#pwd').val() == users[$('#un').val()]){
             alert("You are in!");
         } else {
@@ -665,6 +660,5 @@ function total_gallons(){
   document.getElementById("tot").innerHTML = "You've used " + total + " gallons of water.";
   return total;
 }
-
 
 
